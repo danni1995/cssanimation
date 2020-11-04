@@ -1,0 +1,198 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:#62b4ff;
+}
+
+/* NAVBAR SECTION*/
+
+.navbar{
+ display: flex;
+ position: relative;
+ justify-content: right;
+ margin: 2rem 10px;
+ font-family: sans-serif;
+ right: -100%;
+ animation: slideIn 0.5s 0.5s forwards cubic-bezier(.5, .5, .5, 1.5); /* Here I am making it so that the title slides in from the left to right and I use cubic bezier to get that bounce effect */
+}
+
+
+.menu{
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: black;
+  padding: 5px;
+  margin: 10px 10px;
+  background-image: linear-gradient(to right, black 50%, transparent 50%); /* here I changed the background image with some cool linear gradient which gives a neat effect */
+  background-position: 100% 0;  /* In these last 3 lines I am making it so that the background turns black when I hover over each individual button, that is shown in the menu:hover down below */
+  background-size: 200% 100%;   
+  transition: 0.5s;  
+}
+
+
+.contact{
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: black;
+  padding: 5px;
+  margin: 10px 10px;
+  background-image: linear-gradient(to right, black 50%, transparent 50%);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: 0.5s;  
+  }
+
+  
+  .about{
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    color:black;
+    padding: 5px;
+    margin: 10px 10px;
+    background-image: linear-gradient(to right, black 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: 0.5s;  
+  }
+
+
+  /* TITLE SECTION **/
+  .title{
+    display: flex;
+    position: relative;
+    font-size: 70px;
+    font-family: sans-serif;
+    font-weight: 100;
+    justify-content: center;
+    margin: 2rem;
+    left: -100%; /* Here I have to push the title out of the screen to make the animation work, the animation brings this back on the screen */
+    animation: slideIn2 0.5s 0.5s forwards cubic-bezier(.5, .5, .5, 1.5); /* Here I do the same as above with the navbar */
+  }
+
+  .title span{
+    font-size: 90px;
+    font-weight: 700;
+  }
+  
+
+  /* MAIN PHOTO SECTION */
+  main{
+    display: flex;
+    justify-content: center;
+    animation: fadeIn ease 5s; /* Apply the keyframe and ease for 5 seconds for smooth transitions */
+  }
+
+ .item{
+   vertical-align: top;
+   display: inline-block;
+    text-align: center;
+    width: 300px;
+
+ }
+ 
+ .photo{
+   margin-bottom: 2rem;
+ }
+
+
+.text{
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  }
+
+/* BUTTON */
+.btn{
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  max-width: 20%;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  background-color: #62b4ff;
+  border: 2px solid black;
+  font-size: 30px;
+  margin: 3rem auto;
+  background-image: linear-gradient(to right, black 50%, transparent 50%);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: 0.5s;
+  animation: fadeIn ease 5s;   /* Here the keyframe fadeIn is applied and this makes the button fade in with the main picture and text aswell */
+}
+
+/* SOCIAL MEDIA ICONS */
+.icons{
+  display: flex;
+  justify-content: right;
+  position: relative;
+  animation: fadeIn ease 2s;
+}
+
+.icons img{
+  padding-top: 1rem;
+  margin-left: 2rem;
+}
+
+
+
+ /* HOVER BUTTONS*/
+ .menu:hover{
+  color:#62b4ff;
+  background-position: 0 50%;
+}
+
+.contact:hover{
+  color: #62b4ff;
+  background-position: 0 50%;
+}
+
+.about:hover{
+  color: #62b4ff;
+  background-position: 0 50%;
+}
+
+.arrow1:hover{
+  cursor: pointer;
+ }
+
+ .arrow2:hover{
+   cursor: pointer;
+ }
+
+ .btn:hover{
+  color: #62b4ff;
+  background-position: 0% 50%;
+}
+
+.icons:hover{
+  cursor: pointer;
+}
+
+/* KEYFRAMES */
+
+@keyframes slideIn{ /* In here I want the slide in effect to go from the right -100% to right 0% so that the animation comes in from the right smootly */
+  from{ right: -100%;}
+  to{ right: 0%;}
+}
+
+@keyframes slideIn2{ /* Here it's the same as above but from the left */
+  from{ left: -100%}
+  to{ left: 0%}
+}
+
+@keyframes fadeIn { /* here its just a simple fadein keyframe with the opoacity set to 0 and then it gradually goes to 1 */
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+
